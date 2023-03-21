@@ -10,7 +10,7 @@ class HippopotamusTest extends TestCase
         $hippo1 = new Hippopotamus("Hippo1", 1500, 30);
         $hippo2 = new Hippopotamus("Hippo2", 1600, 25);
         $winner = $hippo1->fight($hippo2);
-        $this->assertEquals("Hippo1", $winner->name);
+        $this->assertEquals("Hippo1", $winner->getName());
     }
 
     public function testLifeCycle()
@@ -24,7 +24,7 @@ class HippopotamusTest extends TestCase
                 $hippo->swim();
             }
             if ($i % 3 == 0) {
-                $this->assertMatchesRegularExpression('/^Hippopotamus\{name=Hippo, weight=\d+, speed=\d+, hunger=\d+\}$/', (string) $hippo);
+                $this->assertStringContainsString("Nom de l'hippo Hippo a perdu  -", (string)$hippo);
             }
         }
     }

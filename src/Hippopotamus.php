@@ -3,7 +3,7 @@
 namespace App;
 
 class Hippopotamus {
-    public $name;
+    private $name;
     private $weight;
     private $tusksSize;
 
@@ -30,6 +30,66 @@ class Hippopotamus {
     }
 
     public function __toString() {
-        return "Nom de l'hippo ".$this->name." poids ".$this->weight . $this->tusksSize." cm.";
+        return "Nom de l'hippo ".$this->name." a perdu  ".$this->weight . " kg.";
+    }
+
+    /**
+     * Get the value of name
+     */ 
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set the value of name
+     *
+     * @return  self
+     */ 
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of weight
+     */ 
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * Set the value of weight
+     *
+     * @return  self
+     */ 
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of tusksSize
+     */ 
+    public function getTusksSize()
+    {
+        return $this->tusksSize;
+    }
+
+    /**
+     * Set the value of tusksSize
+     *
+     * @return  self
+     */ 
+    public function setTusksSize($tusksSize)
+    {
+        $this->tusksSize = $tusksSize;
+
+        return $this;
     }
 }
